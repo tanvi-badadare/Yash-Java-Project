@@ -1,43 +1,49 @@
 import java.util.Scanner;
 
-class Operation {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public class three
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
 
         System.out.print("Enter first number: ");
-        double num1 = sc.nextDouble();
+        double num1 = in.nextDouble();
 
         System.out.print("Enter second number: ");
-        double num2 = sc.nextDouble();
+        double num2 = in.nextDouble();
 
         System.out.print("Enter operator (+ - * /): ");
-        char op = sc.next().charAt(0);
+        char op = in.next().charAt(0);
 
         double result = 0;
 
-        if (op == '+') {
+        if (op == '+')
+        {
             result = num1 + num2;
             System.out.println("Result: " + result);
         }
-        else if (op == '-') {
+        else if (op == '-')
+        {
             result = num1 - num2;
             System.out.println("Result: " + result);
         }
-        else if (op == '*') {
+        else if (op == '*')
+        {
             result = num1 * num2;
             System.out.println("Result: " + result);
         }
-        else if (op == '/') {
-            if (num2 != 0) {
+        else if (op == '/')
+        {
+            if (num2 != 0)
+            {
                 result = num1 / num2;
                 System.out.println("Result: " + result);
-            } else {
+            } 
+            else
                 System.out.println("Cannot divide by zero!");
-            }
         }
-        else {
+        else
             System.out.println("Invalid operator");
-        }
     }
 }
 

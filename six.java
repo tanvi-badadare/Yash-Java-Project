@@ -1,48 +1,51 @@
 import java.util.Scanner;
 
-public class SeasonalDiscount {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public class six
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
 
         // Input details
         System.out.print("Enter customer name: ");
-        String name = sc.nextLine();
+        String name = in.nextLine();
 
         System.out.print("Enter customer address: ");
-        String address = sc.nextLine();
+        String address = in.nextLine();
 
         System.out.print("Enter amount of purchase: ");
-        double amount = sc.nextDouble();
+        double amount = in.nextDouble();
 
         System.out.print("Enter type of purchase (L for Laptop / D for Desktop): ");
-        char type = sc.next().toUpperCase().charAt(0);
+        char type = in.next().toUpperCase().charAt(0);
 
         double discountRate = 0;
 
         // Determine discount based on type and amount
-        if (type == 'L') { // Laptop
-            if (amount <= 25000) {
+        if (type == 'L') // Laptop
+        {
+            if (amount <= 25000)
                 discountRate = 0.0;
-            } else if (amount <= 57000) {
+            else if (amount <= 57000)
                 discountRate = 5.0;
-            } else if (amount <= 100000) {
+            else if (amount <= 100000)
                 discountRate = 7.5;
-            } else {
+            else
                 discountRate = 10.0;
-            }
         } 
-        else if (type == 'D') { // Desktop
-            if (amount <= 25000) {
+        else if (type == 'D') // Desktop
+        {
+            if (amount <= 25000)
                 discountRate = 5.0;
-            } else if (amount <= 57000) {
+            else if (amount <= 57000)
                 discountRate = 7.5;
-            } else if (amount <= 100000) {
+            else if (amount <= 100000)
                 discountRate = 10.0;
-            } else {
+            else
                 discountRate = 15.0;
-            }
         } 
-        else {
+        else
+        {
             System.out.println("Invalid purchase type!");
             return;
         }

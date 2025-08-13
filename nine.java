@@ -1,8 +1,11 @@
-public class Main {
-    public static void main(String[] args) {
+public class nine
+{
+    public static void main()
+    {
         int var = 2; // you can change this value
 
-        switch (var) {
+        switch (var)
+        {
             case 2:
                 System.out.println("better");
                 break;

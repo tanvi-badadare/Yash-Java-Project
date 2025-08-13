@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
-public class DigitCheck {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public class two
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
         System.out.print("Enter a number: ");
-        int n = sc.nextInt();
+        int n = in.nextInt();
 
         if (n >= 0 && n <= 9 || n <= -1 && n >= -9)
             System.out.println("Single digit");

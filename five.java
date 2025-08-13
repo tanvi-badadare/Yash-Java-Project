@@ -1,28 +1,26 @@
 import java.util.Scanner;
 
-public class ElectricityBill {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public class five
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
 
         // Input units consumed
         System.out.print("Enter electricity units consumed: ");
-        double units = sc.nextDouble();
+        double units = in.nextDouble();
 
         double bill = 0;
 
         // Calculate bill according to slabs
-        if (units <= 50) {
+        if (units <= 50)
             bill = units * 0.5;
-        } 
-        else if (units <= 170) { // 50 + 120
+        else if (units <= 170) // 50 + 120
             bill = (50 * 0.5) + ((units - 50) * 0.85);
-        } 
-        else if (units <= 300) { // 50 + 120 + 130
+        else if (units <= 300) // 50 + 120 + 130
             bill = (50 * 0.5) + (120 * 0.85) + ((units - 170) * 1.2);
-        } 
-        else { // Above 300
+        else // Above 300
             bill = (50 * 0.5) + (120 * 0.85) + (130 * 1.2) + ((units - 300) * 1.75);
-        }
 
         // Add surcharge (20%)
         double surcharge = bill * 0.20;
